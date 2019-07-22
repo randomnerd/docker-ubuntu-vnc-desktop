@@ -4,11 +4,11 @@
 # base system
 ################################################################################
 
-FROM ubuntu:18.04 as system
+FROM ubuntu:19.04 as system
 
 
 
-RUN sed -i 's#http://archive.ubuntu.com/#http://tw.archive.ubuntu.com/#' /etc/apt/sources.list; 
+#RUN sed -i 's#http://archive.ubuntu.com/#http://tw.archive.ubuntu.com/#' /etc/apt/sources.list; 
 
 
 # built-in packages
@@ -75,10 +75,10 @@ RUN apt-get update \
 ################################################################################
 # builder
 ################################################################################
-FROM ubuntu:18.04 as builder
+FROM ubuntu:19.04 as builder
 
 
-RUN sed -i 's#http://archive.ubuntu.com/#http://tw.archive.ubuntu.com/#' /etc/apt/sources.list; 
+#RUN sed -i 's#http://archive.ubuntu.com/#http://tw.archive.ubuntu.com/#' /etc/apt/sources.list; 
 
 
 RUN apt-get update \
